@@ -5,7 +5,7 @@
 }
 
 body {
-	min-height: 100vh;
+	height: 100vh;
 	background: url("images/the-rps-gang-reversed.png");
 	background-color: rgba(0, 0, 0, 0.705);
 	opacity: 0.9;
