@@ -1,0 +1,222 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: url("images/the-rps-gang-reversed.png");
+	background-color: rgba(0, 0, 0, 0.705);
+	opacity: 0.9;
+	overflow: hidden;
+}
+section {
+	min-width: 50%;
+	height: 100%;
+	background-color: lightgray;
+	font-family: 'Gorditas', cursive;
+	
+	
+}
+.score {
+	width: 50%;
+	margin: 1.5rem 0;
+	color: #013f52;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.score h2 {
+	font-size: 2rem;
+}
+.score p {
+	text-align: center;
+	padding: .75rem;
+	font-size: 1.5rem;
+}
+.intro {
+	color: #013f52;
+	height: 100%;
+	padding: .5rem;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	/* position: relative;
+	top: -15%; */
+	margin: 0 auto;
+	align-items: center;
+	transition: opacity 0.5s ease;
+	z-index: 10;
+}
+.intro h1 {
+	font-size: 3rem;
+	
+}
+.intro button,
+.match button {
+	height: 3.5rem;
+	width: 10rem;
+	outline: none;
+	border: none;
+	background: #013f52;
+	color: #22c22a;
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: 'Ranchers', cursive;
+	border-radius: 5px;
+	cursor: pointer;
+	
+}
+.intro button{
+	width: 45%;
+}
+.intro button:hover,
+.match button:hover {
+	background: #5661fc;
+	color: black;
+	
+}
+.intro img{
+	width: 50%;
+}
+.match-section{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease 0.5s;
+}
+.match {
+	width: 50%;
+	padding: 1rem;
+	margin: 0 auto;
+	transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+	color: #013f52;
+	text-align: center;
+	font-size: 2.5rem;
+}
+.hands,
+.options {
+	width: 100%;
+	padding: 1rem 0;
+	position: relative;
+	top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.hands img{
+	width: 50%;
+}
+
+.fadeOut {
+	opacity: 0;
+	pointer-events: none;
+}
+.fadeIn {
+	opacity: 1;
+	pointer-events: all;
+}
+.display {
+	display: unset;
+}
+@keyframes shakeComputer {
+	0% {
+		transform:  translateY(0px);
+	}
+	15% {
+		transform:  translateY(-50px);
+	}
+	25% {
+		transform:  translateY(0px);
+	}
+	35% {
+		transform:  translateY(-50px);
+	}
+	50% {
+		transform:  translateY(0px);
+	}
+	65% {
+		transform:  translateY(-50px);
+	}
+	75% {
+		transform:  translateY(0px);
+	}
+	
+}
+@keyframes shakePlayer {
+	0% {
+		transform: translateY(0px);
+	}
+	15% {
+		transform: translateY(-50px);
+	}
+	25% {
+		transform: translateY(0px);
+	}
+	35% {
+		transform: translateY(-50px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	65% {
+		transform: translateY(-50px);
+	}
+	75% {
+		transform: translateY(0px);
+	}
+	
+}
+@media only screen and (max-width: 600px) {
+	section{
+		width: 100%;
+		height: 100vh;
+	}
+	.score {
+		width: 100%;
+		justify-content: space-around;
+	}
+	.score h2{
+		font-size: 1.5rem;
+	}
+
+	.intro h1 {
+		font-size: 1.25rem;
+	}
+	.match-section{
+		margin: 10% auto;
+	}
+	.match button,
+	.intro button {
+		width: 30%;
+		height: 3rem;
+		font-size: 1rem;
+	}
+	.intro button{
+		width: 100%;
+		font-size: 1.5rem;
+	}
+	.intro img{
+		width:100%;
+	}
+	.match{
+		width: 100%;
+	}
+	.hands{
+		width: 100%;
+	}
+	.winner{
+		font-size: 1.5rem;
+	}
+
+} 
